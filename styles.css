@@ -1,0 +1,40 @@
+div.Name{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: lightblue;
+}
+div.SecondHeader {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: black(255, 255, 255);
+}
+div.Image {
+    text-align: center;
+    
+}
+img{
+    height: 400px;
+    width: 600px;
+}
+div.desc {
+    padding: 20px;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    font-family: 'Times New Roman', Times, serif;
+}
+div.Entries{
+    display: flex;
+    flex-direction: column;
+    text-indent: 50px;
+    text-align: center;
+    letter-spacing: 3px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
