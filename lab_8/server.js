@@ -86,7 +86,7 @@ app.use(express.static('public'));
 
 app.get('/api', (req, res) => {
 
-  const baseURL = 'https://api.umd.io/v0/bus/routes';
+  const baseURL = 'https://api.umd.io/v0/courses/list';
 
   fetch(baseURL)
 
@@ -94,9 +94,20 @@ app.get('/api', (req, res) => {
 
     .then((data) => {
 
-      console.log(data);
+      console.log(data[1].course_id);
+      console.log(data.length);
 
-      res.send({ data: data });
+      let Arry = [];
+
+      for (var i = 0; i< data.length; i++){
+          tag = data[i].course_id;
+          if (tag.includes("INST")){
+              Arry += ("<li> Course: "+ tag + "</li> ") ;
+          }
+      }
+
+      console.log(Arry);
+      res.send({ data:Arry });
 
     })
 
